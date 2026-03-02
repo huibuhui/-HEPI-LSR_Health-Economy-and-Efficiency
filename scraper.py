@@ -13,7 +13,7 @@ SENDER_EMAIL = "bitesize00004@gmail.com"  # <--- 請修改為你的 Gmail
 RECEIVER_EMAIL = "bitesize00004@gmail.com"     # <--- 請修改為收件信箱
 
 # 設定 Gemini
-genai.configure(api_key=GEMINI_B4_API_KEY)
+genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
 
 # 設定 PubMed (Entrez 要求提供 Email 以利追蹤)
