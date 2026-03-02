@@ -7,7 +7,7 @@ from supabase import create_client # 安裝：pip install supabase
 
 # --- 1. 環境配置 ---
 # 從 GitHub Secrets 自動讀取變數
-GEMINI_API_KEY = os.getenv("GEMINI_B4_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 SENDER_EMAIL = "bitesize00004@gmail.com"  # <--- 請修改為你的 Gmail
 RECEIVER_EMAIL = "bitesize00004@gmail.com"     # <--- 請修改為收件信箱
