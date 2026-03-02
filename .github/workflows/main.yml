@@ -19,7 +19,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run logic
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_B4_API_KEY }}
           # EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           # TARGET_EMAIL: ${{ secrets.TARGET_EMAIL }}
