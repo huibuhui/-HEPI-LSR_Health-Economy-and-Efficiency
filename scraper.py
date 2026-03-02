@@ -76,7 +76,7 @@ url = os.environ.get("SUPABASE_URL")
 key = os.environ.get("SUPABASE_KEY")
 supabase = create_client(url, key)
 
-# --- 主流程 ---
+# --- SQL 自動化，加入資料庫寫入邏輯： ---
 def save_to_sql(paper_list):
     for paper in paper_list:
         # 使用 upsert：如果 PMID 已存在則更新，不存在則插入
