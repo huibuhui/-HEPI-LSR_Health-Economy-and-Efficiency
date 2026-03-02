@@ -1,8 +1,9 @@
 name: Monthly_LSR_Bot
 on:
   schedule:
-    - cron: '0 0 1 * *' # 每月1號執行
+    - cron: '0 0 * * 1' # 每週一 00:00 UTC 執行
   workflow_dispatch: 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +14,9 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install deps
-        run: pip install -r requirements.txt
+        run: 
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
       - name: Run logic
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
